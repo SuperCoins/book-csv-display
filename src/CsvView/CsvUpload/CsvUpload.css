@@ -1,0 +1,13 @@
+#csv-file-buttons {
+    display: flex;
+    padding: 50px 50px 0px;
+}
+
+#csv-file-buttons button:nth-child(2) {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+#csv-upload-button {
+    margin-bottom: 0px;
+}

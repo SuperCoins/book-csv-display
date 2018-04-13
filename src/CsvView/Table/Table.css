@@ -1,0 +1,10 @@
+#table-div {
+    flex: 1 0 auto;
+    display: flex;
+    padding: 50px;
+}
+
+#table {
+    flex: 1 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+}
