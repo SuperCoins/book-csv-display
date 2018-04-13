@@ -3,8 +3,17 @@ import { PieChart, Pie, Cell, Tooltip } from 'recharts';
 
 import './Chart.css';
 
+// An Array of colours to use for the pie slices
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
+/**
+ * Given an array of books this outputs an array containing objects that detail each genre, and the amount of times it was present
+ * @param {Book[]} books 
+ * @param {string} books.genre
+ * @returns {Object[]} genres - The 
+ * @returns {string} genres[].name - The name of the genre
+ * @returns {string} genres[].value - The amount of times this genre appeared in books
+ */
 function generateGenreArray(books) {
   const genres = books.map(book => book.genre);
   const genreCount = genres.reduce((bookGenres, genre) => {
@@ -17,7 +26,13 @@ function generateGenreArray(books) {
   });
 }
 
-function render(props) {
+/**
+ * Render a piechart from an array of books
+ * @param {Object} props 
+ * @param {Book[]} props.books
+ * @param {Function} props.onGenreClick - A function to call whenever a genre pieslice is clicked
+ */
+export default function render(props) {
   const genreArray = generateGenreArray(props.books);
   return (
     <div className="chart">
@@ -38,5 +53,3 @@ function render(props) {
     </div>
   );
 }
-
-export default render;

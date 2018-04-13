@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import BarChart from './Charts/BarChart';
 import PieChart from './Charts/PieChart';
 import CsvView from './CsvView/CsvView';
 
-class App extends Component {
+/**
+ * The main component of this application
+ */
+export default class App extends Component {
   constructor(props) {
     super(props);
 
@@ -24,7 +28,6 @@ class App extends Component {
   }
 
   onBookClick(bookTitle) {
-    console.log('bookclicked:', bookTitle)
     this.setState({
       selectedTitle: bookTitle,
       selectedGenre: null,
@@ -32,7 +35,6 @@ class App extends Component {
   }
 
   onGenreClick(bookGenre) {
-    console.log('genreClicked:', bookGenre)
     this.setState({
       selectedTitle: null,
       selectedGenre: bookGenre,
@@ -51,5 +53,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

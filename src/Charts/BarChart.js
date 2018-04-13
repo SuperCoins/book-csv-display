@@ -3,7 +3,13 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Label } from 'rech
 
 import './Chart.css';
 
-function render(props) {
+/**
+ * A component that renders a bar chart that displays rating information about a collection of books
+ * @param {Object} props 
+ * @param {Book[]} props.books
+ * @param {Function} props.onBookClick - A function to call whenever a book is clicked
+ */
+export default function render(props) {
   return (
     <div className="chart">
       <BarChart className="svg-chart" width={600} height={400} data={props.books.slice().sort((a, b) => b.rating < a.rating)}
@@ -21,5 +27,3 @@ function render(props) {
     </div>
   );
 }
-
-export default render;

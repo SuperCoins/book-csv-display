@@ -2,7 +2,7 @@
   "name": "csv-display",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://SuperCoins.github.io/csv-display",
+  "homepage": "https://supercoins.github.io/book-csv-display/",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "csvtojson": "^1.1.9",

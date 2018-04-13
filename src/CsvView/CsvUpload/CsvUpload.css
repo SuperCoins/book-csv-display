@@ -3,6 +3,7 @@
     padding: 50px 50px 0px;
 }
 
+/* This pushes the button to the far right, to separate it from the left button */
 #csv-file-buttons button:nth-child(2) {
     margin-left: auto;
     margin-right: 10px;
